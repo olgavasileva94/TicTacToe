@@ -158,16 +158,33 @@ namespace ClassLibraryTicTacToe
 
         public bool GameIsOver()
         {
-            int TokenPlayer1 = this.GetTokenPlayer1();
-            int TokenPlayer2 = this.GetTokenPlayer2();
+            int TokenPlayer1  = this.GetTokenPlayer1();
+            int TokenPlayer2  = this.GetTokenPlayer2();
+            int SizeGameField = this.GetSizeGameField();
 
-            if (this.GetCellValue(0, 0) == TokenPlayer1 && this.GetCellValue(0, 1) == TokenPlayer1 && this.GetCellValue(0, 2) == TokenPlayer1)
+            bool isWinPlayer1 = true;
+            bool isWinPlayer2 = true;
+
+            for (int i = 0; i < SizeGameField; i++)
             {
-                return true;
-            }
-            if (this.GetCellValue(0, 0) == TokenPlayer2 && this.GetCellValue(0, 1) == TokenPlayer2 && this.GetCellValue(0, 2) == TokenPlayer2)
-            {
-                return true;
+                isWinPlayer1 = true;
+                isWinPlayer2 = true;
+                for (int j = 0; j < SizeGameField; j++)
+                {
+                    if (this.GetCellValue(i, j) != TokenPlayer1)
+                    {
+                        isWinPlayer1 = false;
+                    }
+                    if (this.GetCellValue(i, j) != TokenPlayer2)
+                    {
+                        isWinPlayer2 = false;
+                    }
+                }
+
+                if (isWinPlayer1 || isWinPlayer2)
+                {
+                    return true;
+                }
             }
 
             return false;
