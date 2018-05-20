@@ -520,15 +520,15 @@ namespace UnitTestTicTacToe
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();
 
-            int TestSize = 3;
+            int TestSize   = 3;
             int TestToken1 = 1;
             int TestToken2 = 2;
-            int TestX1 = 0;
-            int TestY1 = 0;
-            int TestX2 = 1;
-            int TestY2 = 0;
-            int TestX3 = 2;
-            int TestY3 = 0;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 0;
+            int TestX3     = 2;
+            int TestY3     = 0;
 
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
@@ -545,15 +545,15 @@ namespace UnitTestTicTacToe
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();
 
-            int TestSize = 3;
+            int TestSize   = 3;
             int TestToken1 = 1;
             int TestToken2 = 2;
-            int TestX1 = 0;
-            int TestY1 = 0;
-            int TestX2 = 1;
-            int TestY2 = 0;
-            int TestX3 = 2;
-            int TestY3 = 0;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 0;
+            int TestX3     = 2;
+            int TestY3     = 0;
 
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
@@ -570,13 +570,13 @@ namespace UnitTestTicTacToe
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();
 
-            int TestSize = 3;
+            int TestSize   = 3;
             int TestToken1 = 1;
             int TestToken2 = 2;
-            int TestX2 = 1;
-            int TestY2 = 0;
-            int TestX3 = 2;
-            int TestY3 = 0;
+            int TestX2     = 1;
+            int TestY2     = 0;
+            int TestX3     = 2;
+            int TestY3     = 0;
 
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
@@ -592,15 +592,15 @@ namespace UnitTestTicTacToe
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();
 
-            int TestSize = 3;
+            int TestSize   = 3;
             int TestToken1 = 1;
             int TestToken2 = 2;
-            int TestX1 = 0;
-            int TestY1 = 0;
-            int TestX2 = 1;
-            int TestY2 = 1;
-            int TestX3 = 2;
-            int TestY3 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 1;
+            int TestX3     = 2;
+            int TestY3     = 2;
 
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
@@ -617,15 +617,15 @@ namespace UnitTestTicTacToe
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();
 
-            int TestSize = 3;
+            int TestSize   = 3;
             int TestToken1 = 1;
             int TestToken2 = 2;
-            int TestX1 = 0;
-            int TestY1 = 0;
-            int TestX2 = 1;
-            int TestY2 = 1;
-            int TestX3 = 2;
-            int TestY3 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 1;
+            int TestX3     = 2;
+            int TestY3     = 2;
 
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
@@ -642,15 +642,15 @@ namespace UnitTestTicTacToe
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();
 
-            int TestSize = 3;
+            int TestSize   = 3;
             int TestToken1 = 1;
             int TestToken2 = 2;
-            int TestX1 = 0;
-            int TestY1 = 0;
-            int TestX2 = 1;
-            int TestY2 = 1;
-            int TestX3 = 2;
-            int TestY3 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 1;
+            int TestX3     = 2;
+            int TestY3     = 2;
 
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
@@ -667,13 +667,13 @@ namespace UnitTestTicTacToe
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();
 
-            int TestSize = 3;
+            int TestSize   = 3;
             int TestToken1 = 1;
             int TestToken2 = 2;
-            int TestX1 = 0;
-            int TestY1 = 0;
-            int TestX3 = 2;
-            int TestY3 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX3     = 2;
+            int TestY3     = 2;
 
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
@@ -682,6 +682,178 @@ namespace UnitTestTicTacToe
             Library.SetCellPlayer2(TestX3, TestY3);
 
             Assert.AreEqual(false, Library.GameIsOver());
+        }
+
+        [TestMethod]
+        public void TestMethod_GameIsOver_16()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize   = 4;
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 0;
+            int TestX3     = 2;
+            int TestY3     = 0;
+            int TestX4     = 3;
+            int TestY4     = 0;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer2(TestX1, TestY1);
+            Library.SetCellPlayer2(TestX2, TestY2);
+            Library.SetCellPlayer2(TestX3, TestY3);
+            Library.SetCellPlayer2(TestX4, TestY4);
+
+            Assert.AreEqual(true, Library.GameIsOver());
+        }
+
+        [TestMethod]
+        public void TestMethod_GameIsOver_17()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize   = 4;
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 1;
+            int TestX3     = 2;
+            int TestY3     = 2;
+            int TestX4     = 3;
+            int TestY4     = 3;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer2(TestX1, TestY1);
+            Library.SetCellPlayer2(TestX2, TestY2);
+            Library.SetCellPlayer2(TestX3, TestY3);
+            Library.SetCellPlayer2(TestX4, TestY4);
+
+            Assert.AreEqual(true, Library.GameIsOver());
+        }
+
+        [TestMethod]
+        public void TestMethod_GameIsOver_18()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize   = 4;
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+            int TestX1     = 1;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 1;
+            int TestX3     = 1;
+            int TestY3     = 2;
+            int TestX4     = 1;
+            int TestY4     = 3;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer2(TestX1, TestY1);
+            Library.SetCellPlayer2(TestX2, TestY2);
+            Library.SetCellPlayer2(TestX3, TestY3);
+            Library.SetCellPlayer2(TestX4, TestY4);
+            Library.SetCellPlayer1(TestX1 + 1, TestY1);
+            Library.SetCellPlayer1(TestX2 + 1, TestY2);
+            Library.SetCellPlayer1(TestX3 + 1, TestY3);
+            Library.SetCellPlayer1(TestX4 + 1, TestY4);
+
+            Assert.AreEqual(true, Library.GameIsOver());
+        }
+
+        [TestMethod]
+        public void TestMethod_GameIsOver_19()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize   = 4;
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 0;
+            int TestX3     = 2;
+            int TestY3     = 0;
+            int TestX4     = 3;
+            int TestY4     = 0;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer2(TestX1, TestY1);
+            Library.SetCellPlayer1(TestX2, TestY2);
+            Library.SetCellPlayer2(TestX3, TestY3);
+            Library.SetCellPlayer2(TestX4, TestY4);
+
+            Assert.AreEqual(false, Library.GameIsOver());
+        }
+
+        [TestMethod]
+        public void TestMethod_GameIsOver_20()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize   = 4;
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+            int TestX1     = 0;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 1;
+            int TestX3     = 2;
+            int TestY3     = 2;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer2(TestX1, TestY1);
+            Library.SetCellPlayer2(TestX2, TestY2);
+            Library.SetCellPlayer2(TestX3, TestY3);
+
+            Assert.AreEqual(false, Library.GameIsOver());
+        }
+
+        [TestMethod]
+        public void TestMethod_GameIsOver_21()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize   = 4;
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+            int TestX1     = 1;
+            int TestY1     = 0;
+            int TestX2     = 1;
+            int TestY2     = 1;
+            int TestX3     = 1;
+            int TestY3     = 2;
+            int TestX4     = 1;
+            int TestY4     = 3;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer2(TestX1, TestY1);
+            Library.SetCellPlayer2(TestX2, TestY2);
+            Library.SetCellPlayer2(TestX4, TestY4);
+            Library.SetCellPlayer1(TestX1 + 1, TestY1);
+            Library.SetCellPlayer1(TestX2 + 1, TestY2);
+            Library.SetCellPlayer1(TestX3 + 1, TestY3);
+            Library.SetCellPlayer1(TestX4 + 1, TestY4);
+
+            Assert.AreEqual(true, Library.GameIsOver());
         }
     }
 }
