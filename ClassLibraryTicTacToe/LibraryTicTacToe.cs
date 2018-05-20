@@ -22,6 +22,8 @@ namespace ClassLibraryTicTacToe
             this.CreateGameField(0);
             this.SetNamePlayer1("");
             this.SetNamePlayer2("");
+            this.SetTokenPalyer1(1);
+            this.SetTokenPalyer1(2);
         }
 
         ~LibraryTicTacToe()
@@ -100,6 +102,16 @@ namespace ClassLibraryTicTacToe
         {
             this.SetSizeGameField(Size);
             this.GameField = new int[Size, Size];
+        }
+
+        public void SetCellPlayer1(int x, int y)
+        {
+            this.SetCellValue(0, 0, this.GetTokenPlayer1());
+        }
+
+        public void SetCellPlayer2(int x, int y)
+        {
+            this.SetCellValue(0, 0, this.GetTokenPlayer2());
         }
     }
 }
