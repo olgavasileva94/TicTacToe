@@ -26,21 +26,12 @@ namespace ClassLibraryTicTacToe
 
         }
 
-        //setters and getters
 
-        public String GetNamePlayer1()
-        {
-            return this.NamePlayer1;
-        }
+        //setters
 
         public void SetNamePlayer1(String Name)
         {
             this.NamePlayer1 = Name;
-        }
-
-        public String GetNamePlayer2()
-        {
-            return this.NamePlayer2;
         }
 
         public void SetNamePlayer2(String Name)
@@ -48,11 +39,28 @@ namespace ClassLibraryTicTacToe
             this.NamePlayer2 = Name;
         }
 
+        //getters
+
+        public String GetNamePlayer1()
+        {
+            return this.NamePlayer1;
+        }
+
+        public String GetNamePlayer2()
+        {
+            return this.NamePlayer2;
+        }
+
         //methods
 
         public void CreateGameField(int size)
         {
             this.GameField = new int[0, 0];
+        }
+
+        public int getSizeGameField()
+        {
+            return Convert.ToInt32(Math.Sqrt(Convert.ToDouble(this.GameField.Length)));
         }
     }
 }

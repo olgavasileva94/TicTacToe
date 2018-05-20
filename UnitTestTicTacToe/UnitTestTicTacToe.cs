@@ -19,8 +19,8 @@ namespace UnitTestTicTacToe
             Library.SetNamePlayer1(TestName1);
             Library.SetNamePlayer2(TestName2);
 
-            Assert.AreEqual(Library.GetNamePlayer1(), TestName1);
-            Assert.AreEqual(Library.GetNamePlayer2(), TestName2);
+            Assert.AreEqual(TestName1, Library.GetNamePlayer1());
+            Assert.AreEqual(TestName2, Library.GetNamePlayer2());
         }
 
         [TestMethod]
@@ -34,8 +34,20 @@ namespace UnitTestTicTacToe
             Library.SetNamePlayer1(TestName1);
             Library.SetNamePlayer2(TestName2);
 
-            Assert.AreEqual(Library.GetNamePlayer1(), TestName1);
-            Assert.AreEqual(Library.GetNamePlayer2(), TestName2);
+            Assert.AreEqual(TestName1, Library.GetNamePlayer1());
+            Assert.AreEqual(TestName2, Library.GetNamePlayer2());
+        }
+
+        [TestMethod]
+        public void TestMethod_CreateGameField()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize = 3;
+
+            Library.CreateGameField(TestSize);
+
+            Assert.AreEqual(TestSize, Library.getSizeGameField());
         }
     }
 }
