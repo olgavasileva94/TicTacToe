@@ -158,6 +158,33 @@ namespace UnitTestTicTacToe
         }
 
         [TestMethod]
+        public void TestMethod_SetTokenPalyerIsNotEmpty_1()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+
+            Assert.AreEqual(false, Library.SetTokenPalyer1(TestToken1));
+            Assert.AreEqual(false, Library.SetTokenPalyer1(TestToken2));
+        }
+
+        [TestMethod]
+        public void TestMethod_SetTokenPalyerIsEmpty()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+
+            Assert.AreEqual(true, Library.SetTokenPalyer1(TestToken1));
+            Assert.AreEqual(true, Library.SetTokenPalyer1(TestToken2));
+        }
+
+        [TestMethod]
         public void TestMethod_SetCellPlayer()
         {
             LibraryTicTacToe Library = new LibraryTicTacToe();

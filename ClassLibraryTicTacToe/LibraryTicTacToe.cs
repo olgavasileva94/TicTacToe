@@ -56,6 +56,14 @@ namespace ClassLibraryTicTacToe
 
         public bool SetTokenPalyer1(int Token)
         {
+            int TokenPlayer1 = this.GetTokenPlayer1();
+            int TokenPlayer2 = this.GetTokenPlayer2();
+
+            if (TokenPlayer1 == Token || TokenPlayer2 == Token)
+            {
+                return false;
+            }
+
             this.TokenPlayer1 = Token;
 
             return true;
@@ -63,6 +71,14 @@ namespace ClassLibraryTicTacToe
 
         public bool SetTokenPalyer2(int Token)
         {
+            int TokenPlayer1 = this.GetTokenPlayer1();
+            int TokenPlayer2 = this.GetTokenPlayer2();
+
+            if (TokenPlayer1 == Token || TokenPlayer2 == Token)
+            {
+                return false;
+            }
+
             this.TokenPlayer2 = Token;
 
             return true;
