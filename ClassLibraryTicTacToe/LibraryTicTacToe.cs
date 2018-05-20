@@ -8,6 +8,7 @@ namespace ClassLibraryTicTacToe
 {
     public class LibraryTicTacToe
     {
+        private int     SizeGameField;
         private int[,]  GameField;
         private String  NamePlayer1;
         private String  NamePlayer2;
@@ -16,9 +17,10 @@ namespace ClassLibraryTicTacToe
 
         public LibraryTicTacToe()
         {
-            this.NamePlayer1 = "";
-            this.NamePlayer2 = "";
-            this.GameField = new int[0,0];
+            this.SizeGameField = 0;
+            this.GameField     = new int[this.SizeGameField, this.SizeGameField];
+            this.NamePlayer1   = "";
+            this.NamePlayer2   = "";
         }
 
         ~LibraryTicTacToe()
@@ -28,6 +30,11 @@ namespace ClassLibraryTicTacToe
 
 
         //setters
+
+        public void setSizeGameField(int Size)
+        {
+            this.SizeGameField = 3;
+        }
 
         public void SetNamePlayer1(String Name)
         {
@@ -41,6 +48,11 @@ namespace ClassLibraryTicTacToe
 
         //getters
 
+        public int getSizeGameField()
+        {
+            return this.SizeGameField;
+        }
+
         public String GetNamePlayer1()
         {
             return this.NamePlayer1;
@@ -53,14 +65,10 @@ namespace ClassLibraryTicTacToe
 
         //methods
 
-        public void CreateGameField(int size)
+        public void CreateGameField(int Size)
         {
-            this.GameField = new int[size, size];
-        }
-
-        public int getSizeGameField()
-        {
-            return Convert.ToInt32(Math.Sqrt(Convert.ToDouble(this.GameField.Length)));
+            this.setSizeGameField(Size);
+            this.GameField = new int[Size, Size];
         }
     }
 }
