@@ -17,10 +17,9 @@ namespace ClassLibraryTicTacToe
 
         public LibraryTicTacToe()
         {
-            this.SizeGameField = 0;
-            this.GameField     = new int[this.SizeGameField, this.SizeGameField];
-            this.NamePlayer1   = "";
-            this.NamePlayer2   = "";
+            this.CreateGameField(0);
+            this.SetNamePlayer1("");
+            this.SetNamePlayer2("");
         }
 
         ~LibraryTicTacToe()
@@ -31,7 +30,7 @@ namespace ClassLibraryTicTacToe
 
         //setters
 
-        public void setSizeGameField(int Size)
+        private void setSizeGameField(int Size)
         {
             this.SizeGameField = Size;
         }
