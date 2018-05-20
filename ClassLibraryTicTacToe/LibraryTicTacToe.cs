@@ -33,7 +33,7 @@ namespace ClassLibraryTicTacToe
 
         public void setSizeGameField(int Size)
         {
-            this.SizeGameField = 3;
+            this.SizeGameField = Size;
         }
 
         public void SetNamePlayer1(String Name)
