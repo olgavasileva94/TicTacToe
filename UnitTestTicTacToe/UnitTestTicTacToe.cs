@@ -462,7 +462,7 @@ namespace UnitTestTicTacToe
             Library.SetCellPlayer2(TestX2, TestY2);
             Library.SetCellPlayer1(TestX3, TestY3);
 
-            Assert.AreEqual(true, Library.GameIsOver());
+            Assert.AreEqual(false, Library.GameIsOver());
         }
 
         [TestMethod]
@@ -487,7 +487,7 @@ namespace UnitTestTicTacToe
             Library.SetCellPlayer1(TestX2, TestY2);
             Library.SetCellPlayer1(TestX3, TestY3);
 
-            Assert.AreEqual(true, Library.GameIsOver());
+            Assert.AreEqual(false, Library.GameIsOver());
         }
     }
 }
