@@ -55,7 +55,7 @@ namespace ClassLibraryTicTacToe
 
         public void CreateGameField(int size)
         {
-            this.GameField = new int[0, 0];
+            this.GameField = new int[size, size];
         }
 
         public int getSizeGameField()
