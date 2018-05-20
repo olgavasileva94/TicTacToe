@@ -29,7 +29,7 @@ namespace ClassLibraryTicTacToe
 
         public void SetNamePlayer1(String Name)
         {
-            this.NamePlayer1 = "Olga1";
+            this.NamePlayer1 = Name;
         }
 
         public String GetNamePlayer2()
@@ -39,7 +39,7 @@ namespace ClassLibraryTicTacToe
 
         public void SetNamePlayer2(String Name)
         {
-            this.NamePlayer2 = "Olga2";
+            this.NamePlayer2 = Name;
         }
     }
 }
