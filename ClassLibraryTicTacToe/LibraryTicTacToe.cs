@@ -54,14 +54,18 @@ namespace ClassLibraryTicTacToe
             this.GameField[x, y] = Value;
         }
 
-        public void SetTokenPalyer1(int Token)
+        public bool SetTokenPalyer1(int Token)
         {
             this.TokenPlayer1 = Token;
+
+            return true;
         }
 
-        public void SetTokenPalyer2(int Token)
+        public bool SetTokenPalyer2(int Token)
         {
             this.TokenPlayer2 = Token;
+
+            return true;
         }
 
         //getters
