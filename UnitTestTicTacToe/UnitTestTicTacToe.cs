@@ -867,5 +867,17 @@ namespace UnitTestTicTacToe
 
             Assert.AreEqual(TestName1, Library.GetNamePlayer1());
         }
+
+        [TestMethod]
+        public void TestMethod_SetWinPlayerName_1()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            String TestName1 = "Test1";
+
+            Library.SetWinPlayerName(TestName1);
+
+            Assert.AreEqual(TestName1, Library.GetNamePlayer1());
+        }
     }
 }

@@ -88,7 +88,7 @@ namespace ClassLibraryTicTacToe
 
         public void SetWinPlayerName(String Name)
         {
-            this.NamePlayer1 = "player1";
+            this.NamePlayer1 = Name;
         }
 
         //getters
