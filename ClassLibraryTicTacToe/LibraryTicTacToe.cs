@@ -45,6 +45,11 @@ namespace ClassLibraryTicTacToe
             this.NamePlayer2 = Name;
         }
 
+        public void SetCellValue(int x, int y, int Value)
+        {
+            this.GameField[x, y] = 1;
+        }
+
         //getters
 
         public int getSizeGameField()
@@ -60,6 +65,11 @@ namespace ClassLibraryTicTacToe
         public String GetNamePlayer2()
         {
             return this.NamePlayer2;
+        }
+
+        public int GetCellValue(int x, int y)
+        {
+            return 1;
         }
 
         //methods
