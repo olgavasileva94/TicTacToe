@@ -212,6 +212,26 @@ namespace ClassLibraryTicTacToe
                 }
             }
 
+            isWinPlayer1 = true;
+            isWinPlayer2 = true;
+
+            for (int i = 0; i < SizeGameField; i++)
+            {
+                if (this.GetCellValue(i, i) != TokenPlayer1)
+                {
+                    isWinPlayer1 = false;
+                }
+                if (this.GetCellValue(i, i) != TokenPlayer2)
+                {
+                    isWinPlayer2 = false;
+                }
+            }
+
+            if (isWinPlayer1 || isWinPlayer2)
+            {
+                return true;
+            }
+
             return false;
         }
     }
