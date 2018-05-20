@@ -12,6 +12,8 @@ namespace ClassLibraryTicTacToe
         private int[,]  GameField;
         private String  NamePlayer1;
         private String  NamePlayer2;
+        private int     TokenPlayer1;
+        private int     TokenPlayer2;
 
         //constructors
 
@@ -30,7 +32,7 @@ namespace ClassLibraryTicTacToe
 
         //setters
 
-        private void setSizeGameField(int Size)
+        private void SetSizeGameField(int Size)
         {
             this.SizeGameField = Size;
         }
@@ -50,9 +52,19 @@ namespace ClassLibraryTicTacToe
             this.GameField[x, y] = Value;
         }
 
+        public void SetTokenPalyer1(int Token)
+        {
+            this.TokenPlayer1 = 0;
+        }
+
+        public void SetTokenPalyer2(int Token)
+        {
+            this.TokenPlayer2 = 0;
+        }
+
         //getters
 
-        public int getSizeGameField()
+        public int GetSizeGameField()
         {
             return this.SizeGameField;
         }
@@ -72,11 +84,21 @@ namespace ClassLibraryTicTacToe
             return this.GameField[x, y];
         }
 
+        public int GetTokenPlayer1()
+        {
+            return this.TokenPlayer1;
+        }
+
+        public int GetTokenPlayer2()
+        {
+            return this.TokenPlayer2;
+        }
+
         //methods
 
         public void CreateGameField(int Size)
         {
-            this.setSizeGameField(Size);
+            this.SetSizeGameField(Size);
             this.GameField = new int[Size, Size];
         }
     }

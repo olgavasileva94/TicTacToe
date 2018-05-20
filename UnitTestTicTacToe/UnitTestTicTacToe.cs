@@ -47,7 +47,7 @@ namespace UnitTestTicTacToe
 
             Library.CreateGameField(TestSize);
 
-            Assert.AreEqual(TestSize, Library.getSizeGameField());
+            Assert.AreEqual(TestSize, Library.GetSizeGameField());
         }
 
         [TestMethod]
@@ -59,7 +59,7 @@ namespace UnitTestTicTacToe
 
             Library.CreateGameField(TestSize);
 
-            Assert.AreEqual(TestSize, Library.getSizeGameField());
+            Assert.AreEqual(TestSize, Library.GetSizeGameField());
         }
 
         [TestMethod]
@@ -110,6 +110,21 @@ namespace UnitTestTicTacToe
                     Assert.AreEqual(0, Library.GetCellValue(i, j));
                 }
             }
+        }
+
+        [TestMethod]
+        public void TestMethod_SetTokenPalyer()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestToken1 = 2;
+            int TestToken2 = 3;
+
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+
+            Assert.AreEqual(TestToken1, Library.GetTokenPlayer1());
+            Assert.AreEqual(TestToken2, Library.GetTokenPlayer2());
         }
     }
 }
