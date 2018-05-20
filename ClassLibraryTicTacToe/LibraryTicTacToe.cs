@@ -106,12 +106,12 @@ namespace ClassLibraryTicTacToe
 
         public void SetCellPlayer1(int x, int y)
         {
-            this.SetCellValue(0, 0, this.GetTokenPlayer1());
+            this.SetCellValue(x, y, this.GetTokenPlayer1());
         }
 
         public void SetCellPlayer2(int x, int y)
         {
-            this.SetCellValue(0, 0, this.GetTokenPlayer2());
+            this.SetCellValue(x, y, this.GetTokenPlayer2());
         }
     }
 }
