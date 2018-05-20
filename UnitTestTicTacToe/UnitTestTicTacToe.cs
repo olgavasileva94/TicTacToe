@@ -77,5 +77,21 @@ namespace UnitTestTicTacToe
 
             Assert.AreEqual(TestValue, Library.GetCellValue(TestX, TestY));
         }
+
+        [TestMethod]
+        public void TestMethod_SetCellValue_1()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize = 3;
+            int TestX = 0;
+            int TestY = 0;
+            int TestValue = 3;
+
+            Library.CreateGameField(TestSize);
+            Library.SetCellValue(TestX, TestY, TestValue);
+
+            Assert.AreEqual(TestValue, Library.GetCellValue(TestX, TestY));
+        }
     }
 }
