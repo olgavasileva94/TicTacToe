@@ -23,8 +23,8 @@ namespace ClassLibraryTicTacToe
             this.CreateGameField(0);
             this.SetNamePlayer1("");
             this.SetNamePlayer2("");
-            this.SetTokenPalyer1(1);
-            this.SetTokenPalyer1(2);
+            this.SetTokenPalyer1(0);
+            this.SetTokenPalyer1(0);
             this.SetWinPlayerName("");
         }
 
