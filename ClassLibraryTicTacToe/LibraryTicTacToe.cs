@@ -158,6 +158,13 @@ namespace ClassLibraryTicTacToe
 
         public bool GameIsOver()
         {
+            int TokenPlayer1 = this.GetTokenPlayer1();
+
+            if (this.GetCellValue(0, 0) == TokenPlayer1 && this.GetCellValue(0, 1) == TokenPlayer1 && this.GetCellValue(0, 2) == TokenPlayer1)
+            {
+                return true;
+            }
+
             return false;
         }
     }
