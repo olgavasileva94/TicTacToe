@@ -47,7 +47,7 @@ namespace ClassLibraryTicTacToe
 
         public void SetCellValue(int x, int y, int Value)
         {
-            this.GameField[x, y] = 4;
+            this.GameField[x, y] = Value;
         }
 
         //getters
@@ -69,7 +69,7 @@ namespace ClassLibraryTicTacToe
 
         public int GetCellValue(int x, int y)
         {
-            return 4;
+            return this.GameField[x, y];
         }
 
         //methods
