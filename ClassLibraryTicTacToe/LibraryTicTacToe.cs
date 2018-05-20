@@ -155,5 +155,10 @@ namespace ClassLibraryTicTacToe
 
             return true;
         }
+
+        public bool GameIsOver()
+        {
+            return false;
+        }
     }
 }
