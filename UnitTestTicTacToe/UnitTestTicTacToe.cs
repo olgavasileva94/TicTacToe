@@ -9,8 +9,18 @@ namespace UnitTestTicTacToe
     public class UnitTestTicTacToe
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethod_SetPlayerName()
         {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            String TestName1 = "Olga1";
+            String TestName2 = "Olga2";
+
+            Library.SetNamePlayer1(TestName1);
+            Library.SetNamePlayer2(TestName2);
+
+            Assert.AreEqual(Library.GetNamePlayer1(), TestName1);
+            Assert.AreEqual(Library.GetNamePlayer2(), TestName2);
         }
     }
 }
