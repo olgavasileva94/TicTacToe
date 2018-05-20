@@ -865,7 +865,7 @@ namespace UnitTestTicTacToe
 
             Library.SetWinPlayerName(TestName1);
 
-            Assert.AreEqual(TestName1, Library.GetNamePlayer1());
+            Assert.AreEqual(TestName1, Library.GetWinPlayerName());
         }
 
         [TestMethod]
@@ -877,7 +877,7 @@ namespace UnitTestTicTacToe
 
             Library.SetWinPlayerName(TestName1);
 
-            Assert.AreEqual(TestName1, Library.GetNamePlayer1());
+            Assert.AreEqual(TestName1, Library.GetWinPlayerName());
         }
 
         [TestMethod]
@@ -917,15 +917,15 @@ namespace UnitTestTicTacToe
 
             String TestNamePlayer1 = "Test1";
             String TestNamePlayer2 = "Test2";
-            int TestSize = 3;
-            int TestToken1 = 1;
-            int TestToken2 = 2;
-            int TestX1 = 0;
-            int TestY1 = 0;
-            int TestX2 = 1;
-            int TestY2 = 1;
-            int TestX3 = 2;
-            int TestY3 = 2;
+            int TestSize           = 3;
+            int TestToken1         = 1;
+            int TestToken2         = 2;
+            int TestX1             = 0;        
+            int TestY1             = 0;
+            int TestX2             = 1;
+            int TestY2             = 1;
+            int TestX3             = 2;
+            int TestY3             = 2;
 
             Library.SetNamePlayer1(TestNamePlayer1);
             Library.SetNamePlayer2(TestNamePlayer2);
@@ -937,7 +937,7 @@ namespace UnitTestTicTacToe
             Library.SetCellPlayer2(TestX3, TestY3);
             Library.GameIsOver();
 
-            Assert.AreEqual(TestNamePlayer1, Library.GetWinPlayerName());
+            Assert.AreEqual(TestNamePlayer2, Library.GetWinPlayerName());
         }
     }
 }

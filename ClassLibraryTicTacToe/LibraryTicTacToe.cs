@@ -88,7 +88,7 @@ namespace ClassLibraryTicTacToe
 
         public void SetWinPlayerName(String Name)
         {
-            this.NamePlayer1 = Name;
+            this.WinPlayerName = Name;
         }
 
         //getters
@@ -219,16 +219,40 @@ namespace ClassLibraryTicTacToe
 
                 if (isWinPlayer1V || isWinPlayer2V)
                 {
+                    if (isWinPlayer1V)
+                    {
+                        this.SetWinPlayerName(this.GetNamePlayer1());
+                    }
+                    if (isWinPlayer2V)
+                    {
+                        this.SetWinPlayerName(this.GetNamePlayer2());
+                    }
                     return true;
                 }
                 if (isWinPlayer1G || isWinPlayer2G)
                 {
+                    if (isWinPlayer1G)
+                    {
+                        this.SetWinPlayerName(this.GetNamePlayer1());
+                    }
+                    if (isWinPlayer2G)
+                    {
+                        this.SetWinPlayerName(this.GetNamePlayer2());
+                    }
                     return true;
                 }
             }
 
             if (isWinPlayer1D || isWinPlayer2D)
             {
+                if (isWinPlayer1D)
+                {
+                    this.SetWinPlayerName(this.GetNamePlayer1());
+                }
+                if (isWinPlayer2D)
+                {
+                    this.SetWinPlayerName(this.GetNamePlayer2());
+                }
                 return true;
             }
 
