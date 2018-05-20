@@ -162,72 +162,60 @@ namespace ClassLibraryTicTacToe
             int TokenPlayer2  = this.GetTokenPlayer2();
             int SizeGameField = this.GetSizeGameField();
 
-            bool isWinPlayer1 = true;
-            bool isWinPlayer2 = true;
+            bool isWinPlayer1V = true;
+            bool isWinPlayer2V = true;
+            bool isWinPlayer1G = true;
+            bool isWinPlayer2G = true;
+            bool isWinPlayer1D = true;
+            bool isWinPlayer2D = true;
 
             for (int i = 0; i < SizeGameField; i++)
             {
-                isWinPlayer1 = true;
-                isWinPlayer2 = true;
+                isWinPlayer1V = true;
+                isWinPlayer2V = true;
+                isWinPlayer1G = true;
+                isWinPlayer2G = true;
+
+                if (this.GetCellValue(i, i) != TokenPlayer1)
+                {
+                    isWinPlayer1D = false;
+                }
+                if (this.GetCellValue(i, i) != TokenPlayer2)
+                {
+                    isWinPlayer2D = false;
+                }
+
                 for (int j = 0; j < SizeGameField; j++)
                 {
                     if (this.GetCellValue(i, j) != TokenPlayer1)
                     {
-                        isWinPlayer1 = false;
+                        isWinPlayer1V = false;
                     }
                     if (this.GetCellValue(i, j) != TokenPlayer2)
                     {
-                        isWinPlayer2 = false;
+                        isWinPlayer2V = false;
                     }
-                }
-
-                if (isWinPlayer1 || isWinPlayer2)
-                {
-                    return true;
-                }
-            }
-
-            isWinPlayer1 = true;
-            isWinPlayer2 = true;
-
-            for (int i = 0; i < SizeGameField; i++)
-            {
-                isWinPlayer1 = true;
-                isWinPlayer2 = true;
-                for (int j = 0; j < SizeGameField; j++)
-                {
                     if (this.GetCellValue(j, i) != TokenPlayer1)
                     {
-                        isWinPlayer1 = false;
+                        isWinPlayer1G = false;
                     }
                     if (this.GetCellValue(j, i) != TokenPlayer2)
                     {
-                        isWinPlayer2 = false;
+                        isWinPlayer2G = false;
                     }
                 }
 
-                if (isWinPlayer1 || isWinPlayer2)
+                if (isWinPlayer1V || isWinPlayer2V)
+                {
+                    return true;
+                }
+                if (isWinPlayer1G || isWinPlayer2G)
                 {
                     return true;
                 }
             }
 
-            isWinPlayer1 = true;
-            isWinPlayer2 = true;
-
-            for (int i = 0; i < SizeGameField; i++)
-            {
-                if (this.GetCellValue(i, i) != TokenPlayer1)
-                {
-                    isWinPlayer1 = false;
-                }
-                if (this.GetCellValue(i, i) != TokenPlayer2)
-                {
-                    isWinPlayer2 = false;
-                }
-            }
-
-            if (isWinPlayer1 || isWinPlayer2)
+            if (isWinPlayer1D || isWinPlayer2D)
             {
                 return true;
             }
