@@ -54,12 +54,12 @@ namespace ClassLibraryTicTacToe
 
         public void SetTokenPalyer1(int Token)
         {
-            this.TokenPlayer1 = 0;
+            this.TokenPlayer1 = 2;
         }
 
         public void SetTokenPalyer2(int Token)
         {
-            this.TokenPlayer2 = 0;
+            this.TokenPlayer2 = 3;
         }
 
         //getters

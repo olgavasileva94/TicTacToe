@@ -126,5 +126,20 @@ namespace UnitTestTicTacToe
             Assert.AreEqual(TestToken1, Library.GetTokenPlayer1());
             Assert.AreEqual(TestToken2, Library.GetTokenPlayer2());
         }
+
+        [TestMethod]
+        public void TestMethod_SetTokenPalyer_1()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestToken1 = 1;
+            int TestToken2 = 2;
+
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+
+            Assert.AreEqual(TestToken1, Library.GetTokenPlayer1());
+            Assert.AreEqual(TestToken2, Library.GetTokenPlayer2());
+        }
     }
 }
