@@ -22,5 +22,20 @@ namespace UnitTestTicTacToe
             Assert.AreEqual(Library.GetNamePlayer1(), TestName1);
             Assert.AreEqual(Library.GetNamePlayer2(), TestName2);
         }
+
+        [TestMethod]
+        public void TestMethod_SetPlayerName_1()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            String TestName1 = "Player1";
+            String TestName2 = "Player2";
+
+            Library.SetNamePlayer1(TestName1);
+            Library.SetNamePlayer2(TestName2);
+
+            Assert.AreEqual(Library.GetNamePlayer1(), TestName1);
+            Assert.AreEqual(Library.GetNamePlayer2(), TestName2);
+        }
     }
 }
