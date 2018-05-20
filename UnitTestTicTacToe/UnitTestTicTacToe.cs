@@ -187,5 +187,26 @@ namespace UnitTestTicTacToe
             Assert.AreEqual(TestToken1, Library.GetCellValue(TestXPlayer1, TestYPlayer1));
             Assert.AreEqual(TestToken2, Library.GetCellValue(TestXPlayer2, TestYPlayer2));
         }
+
+        [TestMethod]
+        public void TestMethod_SetCellPlayerIsNotEmpty()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize = 3;
+            int TestToken1 = 2;
+            int TestToken2 = 3;
+            int TestXPlayer1 = 1;
+            int TestYPlayer1 = 1;
+            int TestXPlayer2 = 1;
+            int TestYPlayer2 = 1;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+
+            Assert.AreEqual(false, Library.SetCellPlayer1(TestXPlayer1, TestYPlayer1));
+            Assert.AreEqual(false, Library.SetCellPlayer2(TestXPlayer2, TestYPlayer2));
+        }
     }
 }

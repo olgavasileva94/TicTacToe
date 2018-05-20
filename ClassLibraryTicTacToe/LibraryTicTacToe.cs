@@ -104,14 +104,18 @@ namespace ClassLibraryTicTacToe
             this.GameField = new int[Size, Size];
         }
 
-        public void SetCellPlayer1(int x, int y)
+        public bool SetCellPlayer1(int x, int y)
         {
             this.SetCellValue(x, y, this.GetTokenPlayer1());
+
+            return true;
         }
 
-        public void SetCellPlayer2(int x, int y)
+        public bool SetCellPlayer2(int x, int y)
         {
             this.SetCellValue(x, y, this.GetTokenPlayer2());
+
+            return true;
         }
     }
 }
