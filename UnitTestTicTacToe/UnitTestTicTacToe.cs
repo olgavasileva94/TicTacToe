@@ -49,5 +49,17 @@ namespace UnitTestTicTacToe
 
             Assert.AreEqual(TestSize, Library.getSizeGameField());
         }
+
+        [TestMethod]
+        public void TestMethod_CreateGameField_1()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize = 4;
+
+            Library.CreateGameField(TestSize);
+
+            Assert.AreEqual(TestSize, Library.getSizeGameField());
+        }
     }
 }
