@@ -204,9 +204,54 @@ namespace UnitTestTicTacToe
             Library.CreateGameField(TestSize);
             Library.SetTokenPalyer1(TestToken1);
             Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer1(TestXPlayer1, TestYPlayer1);
 
             Assert.AreEqual(false, Library.SetCellPlayer1(TestXPlayer1, TestYPlayer1));
             Assert.AreEqual(false, Library.SetCellPlayer2(TestXPlayer2, TestYPlayer2));
+        }
+
+        [TestMethod]
+        public void TestMethod_SetCellPlayerIsNotEmpty_1()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize = 3;
+            int TestToken1 = 2;
+            int TestToken2 = 3;
+            int TestXPlayer1 = 0;
+            int TestYPlayer1 = 2;
+            int TestXPlayer2 = 0;
+            int TestYPlayer2 = 1;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+            Library.SetCellPlayer1(TestXPlayer1, TestYPlayer1);
+            Library.SetCellPlayer2(TestXPlayer2, TestYPlayer2);
+
+            Assert.AreEqual(false, Library.SetCellPlayer1(TestXPlayer1, TestYPlayer1));
+            Assert.AreEqual(false, Library.SetCellPlayer2(TestXPlayer2, TestYPlayer2));
+        }
+
+        [TestMethod]
+        public void TestMethod_SetCellPlayerIsEmpty()
+        {
+            LibraryTicTacToe Library = new LibraryTicTacToe();
+
+            int TestSize = 3;
+            int TestToken1 = 2;
+            int TestToken2 = 3;
+            int TestXPlayer1 = 0;
+            int TestYPlayer1 = 2;
+            int TestXPlayer2 = 0;
+            int TestYPlayer2 = 1;
+
+            Library.CreateGameField(TestSize);
+            Library.SetTokenPalyer1(TestToken1);
+            Library.SetTokenPalyer2(TestToken2);
+
+            Assert.AreEqual(true, Library.SetCellPlayer1(TestXPlayer1, TestYPlayer1));
+            Assert.AreEqual(true, Library.SetCellPlayer2(TestXPlayer2, TestYPlayer2));
         }
     }
 }

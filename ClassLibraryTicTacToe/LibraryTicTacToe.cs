@@ -8,12 +8,12 @@ namespace ClassLibraryTicTacToe
 {
     public class LibraryTicTacToe
     {
-        private int     SizeGameField;
-        private int[,]  GameField;
-        private String  NamePlayer1;
-        private String  NamePlayer2;
-        private int     TokenPlayer1;
-        private int     TokenPlayer2;
+        private int SizeGameField;
+        private int[,] GameField;
+        private String NamePlayer1;
+        private String NamePlayer2;
+        private int TokenPlayer1;
+        private int TokenPlayer2;
 
         //constructors
 
@@ -106,6 +106,15 @@ namespace ClassLibraryTicTacToe
 
         public bool SetCellPlayer1(int x, int y)
         {
+            int TokenPlayer1 = this.GetTokenPlayer1();
+            int TokenPlayer2 = this.GetTokenPlayer2();
+            int CellValue    = this.GetCellValue(x, y);
+
+            if (CellValue == TokenPlayer1 || CellValue == TokenPlayer2)
+            {
+                return false;
+            }
+
             this.SetCellValue(x, y, this.GetTokenPlayer1());
 
             return true;
@@ -113,6 +122,15 @@ namespace ClassLibraryTicTacToe
 
         public bool SetCellPlayer2(int x, int y)
         {
+            int TokenPlayer1 = this.GetTokenPlayer1();
+            int TokenPlayer2 = this.GetTokenPlayer2();
+            int CellValue    = this.GetCellValue(x, y);
+
+            if (CellValue == TokenPlayer1 || CellValue == TokenPlayer2)
+            {
+                return false;
+            }
+
             this.SetCellValue(x, y, this.GetTokenPlayer2());
 
             return true;
